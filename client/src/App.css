@@ -1,0 +1,220 @@
+html {
+	font-size: 10px;
+	font-family: Arial;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #eee;
+}
+.App {
+	overflow-x: hidden;
+}
+button {
+	outline: none;
+}
+button:hover {
+	filter: brightness(70%);
+}
+.container {
+	font-size: 2rem;
+	margin: 1rem;
+	background-color: white;
+	padding: 1rem;
+	border-radius: 0.4rem;
+	display: grid;
+	place-items: center;
+}
+.search-bar {
+	margin-bottom: 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-bar input {
+	font-size: 2rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 0.2rem solid #eee;
+	background-color: #eee;
+	outline: none;
+	margin-right: 0.5rem;
+	width: 70%;
+}
+.search-bar button {
+	font-size: 2rem;
+	padding: 1rem;
+	border: 0.2rem solid dodgerblue;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: dodgerblue;
+	color: white;
+}
+.card-box {
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	justify-content: center;
+	overflow-y: scroll;
+	max-height: 65vh;
+}
+.card-box-header {
+	background-color: #111;
+	color: white;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.x-del-btn {
+	background-color: rgb(255, 30, 30);
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 50%;
+	font-weight: bold;
+	position: relative;
+	cursor: pointer;
+}
+.x-del-btn div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.card-box a {
+	text-decoration: none;
+	color: black;
+}
+.card-box-body {
+	padding: 1rem;
+	border: 0.1rem solid #bbb;
+	border-radius: 0.5rem;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	line-height: 3rem;
+}
+.card-box-body h4,
+.card-box-body h5 {
+	font-weight: normal;
+}
+.add-log {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin: 2rem;
+}
+.add-log button {
+	background-color: dodgerblue;
+	color: white;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	border: none;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.add-item-btn {
+	background-color: rgb(23, 182, 23);
+	padding: 0.5rem 1rem;
+	border: 2px solid rgb(23, 182, 23);
+	color: white;
+	border-radius: 0.3rem;
+	font-weight: bold;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.logged-item {
+	width: 100%;
+	margin-top: 1rem;
+}
+.logged-item,
+.logged-item tr,
+.logged-item th,
+.logged-item td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.logged-item th {
+	background-color: black;
+	color: white;
+}
+.logged-item th:last-child {
+	width: 10%;
+}
+.logged-item th, td {
+	padding: 1rem;
+}
+.del-logged-item {
+	text-align: center;
+}
+.del-logged-item button {
+	background-color: rgb(255, 30, 30);
+	padding: 0.5rem 1rem;
+	border: 2px solid rgb(255, 30, 30);
+	color: white;
+	border-radius: 0.3rem;
+	font-weight: bold;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.item-form {
+	margin-top: 1rem;
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 50rem 15rem 15rem 15rem 15rem 8rem;
+	justify-content: center;
+}
+.item-form input {
+	padding: 0.5rem;
+	font-size: 1.5rem;
+	border-radius: 0.4rem;
+	border: 0.1rem solid #333;
+	outline: none;
+}
+.update-item-form {
+	background-color: white;
+	display: grid;
+	font-size: 1.8rem;
+	padding: 1rem;
+	border-radius: 0.4rem;
+	width: 95%;
+	margin: 1rem auto;
+}
+.update-item-form input {
+	font-size: 1.6rem;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border-radius: 0.3rem;
+	border: 0.1rem solid #333;
+	outline: none;
+	width: 100%;
+}
+.update-item-form button {
+	padding: 1rem;
+	border: none;
+	background-color: dodgerblue;
+	font-size: 1.5rem;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 0.3rem;
+	outline: none;
+	width: 100%;
+}
+@media (max-width: 1024px) {
+	html {
+		font-size: 8px;
+	}
+	.item-form {
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	}
+}
